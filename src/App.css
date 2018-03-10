@@ -1,28 +1,79 @@
-.App {
-  text-align: center;
-}
+* {
+  box-sizing: border-box; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+.main {
+  padding: 2em;
+  max-width: 85em; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+header {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 2em 0; }
+  header .logo {
+    background: #FF7977;
+    border-radius: 0.5em;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 1.5em 1em 1.5em 1em; }
 
-.App-title {
+main {
+  background: #F6F7FB; }
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  position: relative; }
+  .toolbar .toolbar__form {
+    display: flex;
+    width: 70%; }
+
+.search-job {
+  background: #F6F7FB;
+  border: none;
+  flex-grow: 1;
   font-size: 1.5em;
-}
+  padding: 1em;
+  text-align: center; }
+  .search-job::placeholder {
+    color: #D4D8E0; }
 
-.App-intro {
-  font-size: large;
-}
+.search-job-button {
+  border: none;
+  border-radius: 50%;
+  background: #FFF;
+  font-size: 1em;
+  padding: 1em;
+  position: absolute;
+  right: 3em;
+  top: 1em;
+  color: #D4D8E0; }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+.job-list {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap; }
+  .job-list .job-item {
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+    width: 25em;
+    height: 10em; }
+
+.job-item__logo {
+  margin: 1.5em; }
+
+.job-item__content {
+  color: #bdbdbd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5em; }
+  .job-item__content .job-item__title {
+    color: #737B84;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.5em; }
+
+.job-item__text p {
+  margin: 0.5em 0 0.5em 0; }
