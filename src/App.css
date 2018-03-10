@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box; }
+
 .main {
-  padding: 2em; }
+  padding: 2em;
+  max-width: 85em; }
 
 header {
   display: flex;
@@ -44,3 +48,32 @@ main {
   right: 3em;
   top: 1em;
   color: #D4D8E0; }
+
+.job-list {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap; }
+  .job-list .job-item {
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+    width: 25em;
+    height: 10em; }
+
+.job-item__logo {
+  margin: 1.5em; }
+
+.job-item__content {
+  color: #bdbdbd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5em; }
+  .job-item__content .job-item__title {
+    color: #737B84;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.5em; }
+
+.job-item__text p {
+  margin: 0.5em 0 0.5em 0; }
