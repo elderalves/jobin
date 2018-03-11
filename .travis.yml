@@ -1,9 +1,10 @@
 language: node_js
 node_js:
   - "node"
-before_deploy:
+script:
   - yarn build
 deploy:
   provider: surge
   project: ./build/
-  domain: jobin.surge.sh  
+  domain: jobin.surge.sh
+  skip_cleanup: true
