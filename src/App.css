@@ -2,8 +2,7 @@
   box-sizing: border-box; }
 
 .main {
-  padding: 2em;
-  max-width: 85em; }
+  padding: 2em 0 0 0; }
 
 header {
   display: flex;
@@ -19,8 +18,12 @@ header {
 
 main {
   background: #F6F7FB; }
+  main .container {
+    margin: 0 auto;
+    max-width: 85em; }
 
 .toolbar {
+  align-items: center;
   display: flex;
   justify-content: center;
   position: relative; }
@@ -34,7 +37,10 @@ main {
   flex-grow: 1;
   font-size: 1.5em;
   padding: 1em;
-  text-align: center; }
+  text-align: center;
+  outline: none;
+  margin-left: 50px;
+  width: 40em; }
   .search-job::placeholder {
     color: #D4D8E0; }
 
@@ -44,19 +50,23 @@ main {
   background: #FFF;
   font-size: 1em;
   padding: 1em;
-  position: absolute;
-  right: 3em;
-  top: 1em;
-  color: #D4D8E0; }
+  color: #D4D8E0;
+  width: 50px;
+  height: 50px; }
 
 .job-list {
   display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap; }
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin-top: 2em;
+  padding-bottom: 1.5em;
+  padding-left: 50px;
+  padding-right: 50px; }
   .job-list .job-item {
     background: #FFF;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
     width: 25em;
     height: 10em; }
 
@@ -77,3 +87,13 @@ main {
 
 .job-item__text p {
   margin: 0.5em 0 0.5em 0; }
+
+@media (max-width: 1024px) {
+  .job-list .job-item {
+    width: 20em; } }
+
+@media (max-width: 480px) {
+  .search-job {
+    width: 0;
+    flex-grow: 1;
+    margin: 0; } }
