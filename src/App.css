@@ -49,7 +49,6 @@ main {
   border-radius: 50%;
   background: #FFF;
   font-size: 1em;
-  padding: 1em;
   color: #D4D8E0;
   width: 50px;
   height: 50px; }
@@ -64,6 +63,8 @@ main {
   padding-right: 50px; }
   .job-list .job-item {
     background: #FFF;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     margin-bottom: 2em;
@@ -72,6 +73,9 @@ main {
 
 .job-item__logo {
   margin: 1.5em; }
+  .job-item__logo .job__logo-image {
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+    width: 10em; }
 
 .job-item__content {
   color: #bdbdbd;
@@ -90,10 +94,28 @@ main {
 
 @media (max-width: 1024px) {
   .job-list .job-item {
-    width: 20em; } }
+    width: 20em; }
+  .job-item__logo .job__logo-image {
+    width: 8em; } }
 
 @media (max-width: 480px) {
   .search-job {
     width: 0;
     flex-grow: 1;
     margin: 0; } }
+
+@media (max-width: 375px) {
+  .job-list .job-item {
+    width: 100%; }
+  .job-item .job-item__logo {
+    margin-right: 1em; }
+  .job-item .job-item__content {
+    margin-left: 1em; } }
+
+@media (max-width: 320px) {
+  .job-item .job-item__logo {
+    margin-right: 0.5em; }
+  .job-item .job-item__content {
+    margin-left: 0.5em; }
+  .job-item__logo .job__logo-image {
+    width: 6em; } }
