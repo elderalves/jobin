@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-import SearchBoxComponent from "./components/SearchBoxComponent";
-import JobsListComponent from "./components/JobsListComponent";
+import SearchBox from "./components/SearchBox";
+import JobsList from "./components/JobsList";
 
 class App extends Component {
   render() {
@@ -14,8 +14,8 @@ class App extends Component {
       	</header>
       	<main>
       		<div className="container">
-						<SearchBoxComponent />
-            <JobsListComponent />
+						<SearchBox />
+            <JobsList />
       		</div>
       	</main>
       </div>

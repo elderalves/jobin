@@ -94,7 +94,6 @@ main {
 		border-radius: 10px;
 		box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
 		display: flex;
-		justify-content: space-between;
 		//padding: 2em;
 		margin-bottom: 2em;
 		width: 25em;
@@ -102,33 +101,45 @@ main {
 	}
 }
 
-.job-item__logo {
-	margin: 1.5em;
-	
-	.job__logo-image {
-		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
-		width: 10em;
+.job-item {
+	&__logo {
+		margin: 1.5em;
+		box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.05);
+		text-align: center;
+		max-width: 35%;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		border-radius: 8px;
+		
+		&-image {
+			width: 30%;
+		}
 	}
-}
 
-.job-item__content {
-	color: #bdbdbd;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin: 1.5em;
+	&__content {
+		color: #bdbdbd;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 1.5em 0;
+	}
 
-	.job-item__title {
+	&__title {
 		color: #737B84;
-		font-size: 1em;
-		font-weight: bold;
+		font-size: 1.2em;
+		font-weight: normal;
 		margin-bottom: 0.5em;
 	}
-}
 
-.job-item__text {
-	p {
-		margin: 0.5em 0 0.5em 0;
+	&__company {
+		font-size: 20px;
+	}
+
+	&__text {
+		p {
+			margin: 0.5em 0 0.5em 0;
+		}
 	}
 }
 
@@ -138,36 +149,20 @@ main {
 			width: 20em;
 		}
 	}
-
-	.job-item__logo {
-		.job__logo-image {
-			width: 8em;
-		}
-	}
 }
 
-@media (max-width: 480px) {
-	.search-job {
-		width: 0;
-		flex-grow: 1;
-		margin: 0;
-	}
+@media (max-width: 980px) {
+	
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
 	.job-list {
-		.job-item {
-			width: 100%;
-		}
+		padding-left: 20px;
+    padding-right: 20px;
 	}
-
 	.job-item {
-		.job-item__logo {
+		&__logo {
 			margin-right: 1em;
-		}
-
-		.job-item__content {
-			margin-left: 1em;
 		}
 	}
 }
